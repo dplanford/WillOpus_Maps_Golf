@@ -1,0 +1,22 @@
+# Specify the ruleset you want to inherit from
+
+# Configure the analyzer's behavior
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  exclude:
+    - "build/**"
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+# Enable or disable specific lint rules
+linter:
+  rules:
+    - prefer_const_declarations
+    - prefer_final_locals
+    - avoid_print
+
+formatter:
+  trailing_commas: preserve
