@@ -1,17 +1,17 @@
 # willopus_golf_maps
 
-A new Flutter project.
+So far, this is a quick test of playing with Google Maps in a Flutter project.
+
+It currently displays a Google Maps view, and 3 buttons (Zoom 1-3). Clicking a button zooms to 3 locations on the Albuquerque Los Altos Golf Course, with the third button running extra calculations to match the map zoom to the device's screen size.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This repository only includes the Flutter files (lib/ directory, pubspec.yaml, etc.). The platform specific build files are not included.
 
-A few resources to get you started if this is your first Flutter project:
+To play with this code, first create a new Flutter project (aka: flutter create willopus_maps_golf).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Second, copy the included files into the main directory, overwritting any existing just created files.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Third, on pub.dev, look up the google_maps_flutter package, and follow the simple instructions to create your own Google key, and inject it into the platform build settings.
+
+Now you can play with my example code!
