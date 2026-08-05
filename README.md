@@ -1,6 +1,6 @@
 # willopus_golf_maps
 
-So far, this is a quick test of playing with Google Maps in a Flutter project.
+So far, this is a quick test of playing with Google Maps in a Flutter project. Eventually it might become a simple golf mapping app, showing each hole and your position as you play a round, as well as keeping your score.
 
 It currently displays a Google Maps view, and 3 buttons (Zoom 1-3). Clicking a button zooms to 3 locations on the Albuquerque Los Altos Golf Course, with the third button running extra calculations to match the map zoom to the device's screen size.
 
