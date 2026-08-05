@@ -40,7 +40,7 @@ class WillOpusMapTestState extends State<WillOpusMapTest> {
               _mapController = controller;
             },
             initialCameraPosition: CameraPosition(
-              target: LatLng(courseLosAltosPar3Init.lat, courseLosAltosPar3Init.lng),
+              target: LatLng(courseLosAltosPar3Init.latlng.latitude, courseLosAltosPar3Init.latlng.longitude),
             ),
             // TODO: can I add bearing/tilt/zoom to init position?
             // Otherwise, need to quick update after init? Without animating!
@@ -71,7 +71,7 @@ class WillOpusMapTestState extends State<WillOpusMapTest> {
 
                 final centerPoint = MapHelper.getCenter(tmpPoints[0], tmpPoints[1]);
 
-                _animateCamera(WillOpusMapPoint(lat: centerPoint.lat, lng: centerPoint.lng, zoom: mapZoom));
+                _animateCamera(WillOpusMapPoint(latlng: centerPoint, zoom: mapZoom));
               },
               child: const Text('Hole 3'),
             ),
@@ -84,7 +84,14 @@ class WillOpusMapTestState extends State<WillOpusMapTest> {
 
   void _animateCamera(WillOpusMapPoint mapPoint) {
     _mapController?.animateCamera(
-      CameraUpdate.newCameraPosition(CameraPosition(bearing: mapPoint.bearing, target: LatLng(mapPoint.lat, mapPoint.lng), tilt: mapPoint.tilt, zoom: mapPoint.zoom)),
+      CameraUpdate.newCameraPosition(
+        CameraPosition(
+          bearing: mapPoint.bearing,
+          target: LatLng(mapPoint.latlng.latitude, mapPoint.latlng.longitude),
+          tilt: mapPoint.tilt,
+          zoom: mapPoint.zoom,
+        ),
+      ),
       duration: _cameraUpdateAnimationDuration,
     );
   }
