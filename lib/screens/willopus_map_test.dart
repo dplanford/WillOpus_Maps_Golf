@@ -52,26 +52,37 @@ class WillOpusMapTestState extends State<WillOpusMapTest> {
           children: [
             TextButton(
               onPressed: () {
-                _animateCamera(courseLosAltosPar3[0]);
+                _animateCamera(
+                  MapHelper.getRotatedPointFromBoundingList(
+                    mapPoints: hole1Points,
+                    screenSize: MediaQuery.of(context).size,
+                    bearing: 0.0,
+                  ),
+                );
               },
               child: const Text('Hole 1'),
             ),
             TextButton(
               onPressed: () {
-                _animateCamera(courseLosAltosPar3[1]);
+                _animateCamera(
+                  MapHelper.getRotatedPointFromBoundingList(
+                    mapPoints: hole1Points,
+                    screenSize: MediaQuery.of(context).size,
+                    bearing: 90.0,
+                  ),
+                );
               },
               child: const Text('Hole 2'),
             ),
             TextButton(
               onPressed: () {
-                //_animateCamera(courseLosAltosPar3[2]);
-                final screenWidth = MediaQuery.of(context).size.width;
-                final degreeSpan = MapHelper.getTmpDegreeSpan();
-                final mapZoom = MapHelper.getZoomFromScreenAndSpan(screenWidth, degreeSpan);
-
-                final centerPoint = MapHelper.getCenter(tmpPoints[0], tmpPoints[1]);
-
-                _animateCamera(WillOpusMapPoint(latlng: centerPoint, zoom: mapZoom));
+                _animateCamera(
+                  MapHelper.getRotatedPointFromBoundingList(
+                    mapPoints: hole1Points,
+                    screenSize: MediaQuery.of(context).size,
+                    bearing: 245.0,
+                  ),
+                );
               },
               child: const Text('Hole 3'),
             ),

@@ -39,3 +39,11 @@ const List<LatLng> tmpPoints = [
   LatLng(35.084509, -106.539280),
   LatLng(35.083964, -106.540561),
 ];
+
+// TMP: Hole 1 bounding box
+const List<LatLng> hole1Points = [
+  LatLng(35.084583, -106.539335),
+  LatLng(35.084402, -106.539236),
+  LatLng(35.083827, -106.540478),
+  LatLng(35.084094, -106.540642),
+];
